@@ -15,15 +15,15 @@
 ### BEGINNERS
 * Issue 01 - Configure WEBPACK 4 - [Beginner Webpack 4 Guide](https://hackernoon.com/lets-start-with-webpack-4-91a0f1dba02e)
 * [SOURCE] packages includes:
-** Live Server: webpack-dev-server
-** Working with HTML: html-webpack-plugin
-** Working with ES6+ (translate ES6+ to ES5): babel-loader and @babel/preset-env
-** Working with Typescript: @babel/preset-typescrip
-** Working CSS and SCSS: style-loader, css-loader, node-sass, sass-loader
-** Plugins: Extract all style into a single file, post-css
-** Loading static resources: file-loader
-** copy-webpack-plugin
-** Different environments: webpack-merge, clean-webpack-plugin
+* Live Server: webpack-dev-server
+* Working with HTML: html-webpack-plugin
+* Working with ES6+ (translate ES6+ to ES5): babel-loader and @babel/preset-env
+* Working with Typescript: @babel/preset-typescrip
+* Working CSS and SCSS: style-loader, css-loader, node-sass, sass-loader
+* Plugins: Extract all style into a single file, post-css
+* Loading static resources: file-loader
+* copy-webpack-plugin
+* Different environments: webpack-merge, clean-webpack-plugin
 
 
 
