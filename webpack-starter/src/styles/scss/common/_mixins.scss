@@ -1,0 +1,21 @@
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-broder-radius: $radius;
+            border-radius: $radius;
+}
+
+$style1: 100%, 70px, #f06f06;
+$style2: (background: #bada55, width: 100%, height: 100px);
+
+@mixin box($width, $height, $background) {
+    width: $width;
+    height: $height;
+    background-color: $background;
+}

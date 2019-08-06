@@ -1,2 +1,4 @@
-$h3-bg-color: tan ;
-h3 {background-color: $h3-bg-color; user-select: none;}
+@import 'common/_variable' ;
+@import 'common/_mixins';
+
+@import 'components/box';

@@ -13,6 +13,18 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.scss$/,
+                include: [path.resolve(__dirname, "src/styles/scss")],
+                use: [
+                    {
+                        loader: "sass-loader",
+                        options: {
+                          sourceMap: true
+                        }
+                    }
+                ]
+            },
+            {
                 test: [/.css$|.scss$/],
                 use:[
                     MiniCssExtractPlugin.loader,

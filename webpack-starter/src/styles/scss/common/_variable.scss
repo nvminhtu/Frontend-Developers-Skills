@@ -1,0 +1,20 @@
+/* General Variables */
+$base-color: #000000;
+$main-color: #cccccc;
+$second-color: #dddddd;
+$third-color: #dfdfdf;
+
+$light-background: #dfdfdf;
+$dark-background: #cecece;
+
+/* Border, Bacground Variables */
+$border-dark: rgba($base-color, 0.88);
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

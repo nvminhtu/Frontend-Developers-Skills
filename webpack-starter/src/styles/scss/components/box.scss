@@ -1,0 +1,14 @@
+.box {
+    @include border-radius(3px);
+    width: 100px;
+    height: 100px;
+    background-color: $base-color;
+    color: $second-color;
+}
+
+.box-style1 {
+    @include box($style1...);
+}
+.box-style2 {
+    @include box($style2...);
+}
