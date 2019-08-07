@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>AJAX practice</title>
+  <script>
+    var myRequest = new XMLHttpRequest();
+  myRequest.open('GET', 'surprise.html');
+  myRequest.onreadystatechange = function () {
+    if (myRequest.readyState === 4) {
+      document.getElementById('ajax-content').innerHTML = myRequest.responseText;
+      console.log(myRequest.responseText);
+    }
+  };
+
+  function sendTheAJAX() {
+    myRequest.send();
+    document.getElementById('reveal').style.display = 'none';
+  }
+  </script>
+</head>
+<body>
+    <div class="title">
+      <h1>Today's your special day!</h1>
+    </div>
+    <button id="reveal" onclick="sendTheAJAX()" class="button">Why's that?</button>
+    <div id="ajax-content">
+    </p>
+</body>
+</html>

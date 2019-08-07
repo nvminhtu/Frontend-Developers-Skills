@@ -1,0 +1,10 @@
+body {
+  font-family: Helvetica;
+  text-align: center;
+}
+
+#birthday-greeting {
+  font-size: 72px;
+  color: red;
+  text-transform: uppercase;
+}
