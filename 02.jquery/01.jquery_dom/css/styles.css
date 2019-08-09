@@ -1,0 +1,18 @@
+.box {
+    width: 300px;
+    height: 100px;
+    background-color: #dedede;
+    vertical-align: middle;
+    text-align: center;
+    display: flexbox;
+    padding-top: 15px;
+}
+#chair-01 {
+    background : orange;
+}
+/* Sliding Tab 1 */
+.tab-content {
+    height: 100px;
+    display: none;
+}
+/* Sliding Tab 2 */
