@@ -9,23 +9,29 @@
             <span v-if="seen">Now you see me</span>
         </div>
             
+       
+        <ul id="app-2">
+            <li v-for="(item,index) in items">
+                {{ parentMessage }} - {{ index }} - {{ item.message }}
+            </li>
+        </ul>
         
         <div id="app-4">
-            <!-- <ol>
-                <li>Singapore</li>
-                <li>Malaysia</li>
-                <li>Thailand</li>
-                <li>Vietnam</li>
-                <li>Philippin</li>
-            </ol> -->
-            <ol>
-                <li v-for="todo in todos">
-                    {{todo.text}}
-                </li>
-            </ol>
-        </div>
-
-
+                <!-- <ol>
+                    <li>Singapore</li>
+                    <li>Malaysia</li>
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                    <li>Philippin</li>
+                </ol> -->
+                <ol>
+                    <li v-for="todo in todos">
+                        {{todo.text}}
+                    </li>
+                </ol>
+            </div>
+    
+                
     </body>
     <script src="index.js"></script>
 </html>

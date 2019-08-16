@@ -16,3 +16,14 @@ var app1 = new Vue({
         seen : true
     }
 });
+
+var app2 = new Vue({
+    el: '#app-2',
+    data : {
+        parentMessage : 'Parent',
+        items: [
+            { message : 'One Piece' },
+            { message : 'Dragon Fighter Z' }
+        ]
+    }
+})
