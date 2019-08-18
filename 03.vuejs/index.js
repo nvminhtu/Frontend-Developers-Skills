@@ -27,3 +27,10 @@ var app2 = new Vue({
         ]
     }
 })
+
+var app5 = new Vue({
+    el: '#app-5',
+    data : {
+        rawHtml : '<span style="color:red">Amazing Cool</span>'
+    }
+})
