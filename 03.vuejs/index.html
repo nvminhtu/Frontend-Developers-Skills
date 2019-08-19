@@ -35,7 +35,16 @@
             <p>using Mustacles: {{ rawHtml }}</p>
             <p>Using v-html directive: <span v-html="rawHtml"></span></p>
         </div>
-                
+        
+        <div id="app-6"> 
+            <p>Using v-bind</p>
+            <div class="data-student">
+                <p v-bind:id="name">{{ name }}</p>
+                <p v-bind:id="age"></p>
+                <p v-bind:id="from"></p>
+            </div>
+            
+        </div>
     </body>
     <script src="index.js"></script>
 </html>

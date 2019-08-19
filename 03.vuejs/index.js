@@ -34,3 +34,13 @@ var app5 = new Vue({
         rawHtml : '<span style="color:red">Amazing Cool</span>'
     }
 })
+
+
+var app6 = new Vue({
+    el: '#app-6',
+    data: {
+        name : 'Torress',
+        age : 19,
+        from : 'Dong Nai'
+    }
+})
