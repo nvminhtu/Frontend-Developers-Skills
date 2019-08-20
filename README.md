@@ -1,6 +1,7 @@
-# LEARNING SASS
+# FRONTEND DEVELOPERS
 
-## SASS RULES
+## 01.SASS - RULES
+
 * Preprocessing
 * Variable
 * Mixins
@@ -10,9 +11,8 @@
 * Extend/Inheritance
 * Operators
 
-## WEBPACK 4
+## 02.WEBPACK 4
 
-### BEGINNERS
 * Issue 01 - Configure WEBPACK 4 - [Beginner Webpack 4 Guide](https://hackernoon.com/lets-start-with-webpack-4-91a0f1dba02e)
 * [SOURCE] packages includes:
 * Live Server: webpack-dev-server
@@ -25,8 +25,9 @@
 * copy-webpack-plugin
 * Different environments: webpack-merge, clean-webpack-plugin
 
+## 03.Usuage of MARKDOWN  GUIDE
 
-
-## Usuage of MARKDOWN  GUIDE
 * Press Ctrl+Shift+V on Visual Studio Code to preview Markdown
 * Markdown Format - following by [Markdown Guide](https://www.markdownguide.org/basic-syntax/#links)
+
+## 04. JQUERY
