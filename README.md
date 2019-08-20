@@ -35,3 +35,22 @@
 * JQUERY DOM
 * JQUERY Accordion
 * JQUERY ScrollTo
+
+## 05. CSS3
+
+## 06. JAVASCRIPT (ES5,ES6)
+
+* Scope/Hoisting
+
+## UI Layout
+
+* BULMA
+* MATERIAL DESIGN
+* SEMANTIC
+* BOOTSTRAP
+
+## PROJECTS
+
+
+### PROJECT01: Generate Hashtag
+
