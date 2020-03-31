@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toggle class on Hover</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" href="highlighter/dessert.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      This script help us fix broken images when they are not in a right address.
+    <!-- /.header --></div>
+    <div class="contents">
+      <a href="#" class="btn">
+        Toggle this
+      <!-- /.btn --></a>
+      <div class="btn_content">
+        content here
+      <!-- /.btn_content --></div>
+    <!-- /.contents --></div>
+    <div class="footer">
+      <div class="backtop">
+        <a href="#" class="top">Back to top</a>
+      <!-- /.top --></div>
+    <!-- /.footer --></div>
+  <!-- /.container --></div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="highlighter/prettify.js"></script>
+  <script type="text/javascript">
+    /*$(document).ready(function(){
+      $('.btn').hover(function(){
+        $(this).addClass('hover');
+      },function(){
+        $(this).removeClass('hover');
+      });
+    }); */
+  
+    $(document).ready(function(){
+      $('.btn').hover(function(){
+        $(this).toggleClass('hover');
+      });
+    });
+  </script>
+</body>
+</html>

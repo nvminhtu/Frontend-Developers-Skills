@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+html{overflow-y:scroll;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;}table{border-collapse:collapse;border-spacing:0;}caption,th{text-align:left;}q:before,q:after{content:'';}object,embed{vertical-align:top;}hr,legend{display:none;}h1,h2,h3,h4,h5,h6{font-size:100%;}img,abbr,acronym,fieldset{border:0;}ul li{list-style-type:none;}a,label{cursor:pointer;}img{vertical-align:bottom;margin:0;padding:0;}
+/* Extended base styles (site specific)
+*****************************************************************/
+html {
+	overflow-y: scroll; /* always force a scrollbar in non-IE */
+}
+body {
+	background: #e3e5e5;
+	overflow-x: hidden;
+	height: 4550px;
+	line-height: 1.5;
+	color: #000;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+}
+h1 {
+	color: #F9C40D;
+	background: #000;
+	padding: 5px;
+}
+a, a:link, a:active, a:visited {
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	color: #21a97e;
+	outline: none;
+	text-decoration: none;
+}
+a:hover {
+	color: #000;
+}
+img {
+	display: block;
+}
+p {
+	margin: 1em 0;
+}
+
+/* Common shared styles
+*****************************************************************/
+hr {
+	margin: 0;
+	border: none;
+	border-top: 1px solid #3b3b3b;
+	border-bottom: 1px solid #3b3b3b;
+	height: 3px;
+}
+
+/* Page structure
+*****************************************************************/
+#wrapper {
+	position: relative;
+	height: 711px;
+	overflow: hidden;
+	clear: both;
+}
+
+/* Nav
+*****************************************************************/
+#primary {
+	z-index: 5;
+	position: fixed;
+	top: 50%;
+	right: 16px;
+	margin-top: -40px;
+}
+#primary li {
+	position: relative;
+	height: 20px;
+}
+#primary a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	text-indent: -9999px;
+	background: transparent url(../img/nav-dot.png) 4px 4px no-repeat;
+}
+#primary a:hover, #primary a.active {
+	background: transparent url(../img/nav-dot.png) 4px -16px no-repeat;
+}
+#primary h1 {
+	position: absolute;
+	right: 22px;
+	top: -7px;
+	display: none;
+	padding: 4px 20px 4px 7px;
+	color: #fff;
+	white-space: nowrap;
+	background: transparent url(../img/nav-arrow.png) 100% 50% no-repeat;
+}
+nav.next-prev {
+	margin: 20px 0 0 0;
+}
+a.prev, a.next {
+	display: block;
+	width: 15px;
+	height: 11px;
+	text-indent: -9999px;
+}
+a.prev {
+	margin: 0 auto 5px auto;
+	background: transparent url(../img/scroll-arrow-up.png) 0 0 no-repeat;
+}
+a.prev:hover {
+	background: transparent url(../img/scroll-arrow-up.png) 0 -11px no-repeat;
+}
+a.next {
+	margin: 5px auto 0 auto;
+	background: transparent url(../img/scroll-arrow-down.png) -1px 0 no-repeat;
+}
+a.next:hover {
+	background: transparent url(../img/scroll-arrow-down.png) -1px -11px no-repeat;
+}
+
+/* Parallax
+*****************************************************************/
+
+/* inner */
+#content {
+	position: relative;
+	z-index: 4;
+	max-width: 940px;
+	padding: 0 10px;
+	margin: 0 auto;
+	line-height: 1.7;
+}
+
+#content article {
+	width: 300px;
+	margin-left: 0px;
+}
+#oro_01 {
+	position: absolute;
+	top: 0;
+}
+#oro_02 {
+	position: absolute;
+	top: 1500px;
+}
+#oro_03 {
+	position: absolute;
+	top: 4000px;
+}
+#content h1 {
+	margin: 0 0 25px 0;
+	font-size: 40px;
+	font-family: Arial, sans-serif;
+	font-weight: normal;
+	line-height: 35px;
+}
+#content h3 {
+	font-size: 20px;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	color: #fff;
+	background: #107B61;
+	padding: 5px;
+	line-height: 35px;
+}
+.bg_parallax {
+	/*position: fixed;*/
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: 100%;
+	margin-left: -950px;
+}
+#parallax-bg1 {
+	z-index: 1;
+}
+#parallax-bg2 {
+	z-index: 3;
+}
+#parallax-bg3 {
+	z-index: 2;
+}
+#parallax-bg4 {
+	z-index: 4;
+	margin-left: 200px;
+}
+/*----------------------------------------
+    career
+----------------------------------------*/
+
+#career {
+  height: 711px;
+  overflow: hidden;
+  background: #ffffff url(../img/bg-career_03.png) no-repeat center -130px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#career .bg01 {
+  background: url(../img/bg-career_01.png) no-repeat center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 130%;
+  height: 1000px;
+  width: 100%;
+}
+
+#career .bg02 {
+  background: url(../img/bg-career_02.png) no-repeat center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 70%;
+  height: 1000px;
+  width: 100%;
+}
+#contact_us {
+  height: 533px;
+  padding: 50px 0;
+  background: url(../img/bg-contact.jpg) no-repeat center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

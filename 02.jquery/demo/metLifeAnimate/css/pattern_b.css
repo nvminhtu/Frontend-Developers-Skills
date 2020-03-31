@@ -1,0 +1,124 @@
+.inner {
+  width: 980px;
+  margin: 0 auto
+}
+#header {
+  background: url(../img/pattern_b/dum-grass.png), url(../img/pattern_b/dum-sky.jpg), url(../img/pattern_b/dum-sky2.jpg);
+  background-repeat: repeat-x, no-repeat, repeat;
+  background-position: center bottom, center top, center top;
+  width: 100%;
+  position: relative;
+  overflow: hidden
+}
+#header .inner {
+  position: relative;
+  background: url(../img/pattern_b/dum-illust.png) no-repeat 40px 100px
+}
+#header .cloud {
+  position: absolute
+}
+#header .cloud_1 {
+  left: 1048px;
+  top: 126px
+}
+#header .cloud_2 {
+  left: 923px;
+  top: 30px
+}
+#header .cloud_3 {
+  left: -85px;
+  top: 130px
+}
+#header .cloud_4 {
+  left: -164px;
+  top: 42px
+}
+#header .visual {
+  width: 100%;
+  height: 400px;
+  overflow: hidden
+}
+#header .woodstock {
+  position: absolute;
+  left: 800px;
+  top: 150px;
+  z-index: 999999
+}
+#header .site_logo {
+  position: absolute;
+  left: 220px;
+  top: 50px
+}
+#header .company_logo {
+  position: absolute;
+  top: 0;
+  left: 0
+}
+#global_nav {
+  background: #fff;
+  box-shadow: 0 6px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 9999
+}
+#global_nav li {
+  float: left;
+  width: 245px;
+  text-align: center
+}
+#global_nav li a {
+  display: inline-block;
+  width: 100%;
+  height: 80px
+}
+#global_nav ul:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  height: 0.1px;
+  font-size: 0.1em;
+  line-height: 0;
+  clear: both
+}
+#contents {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: url(../img/pattern_b/dum-footer.png), url(../img/pattern_b/dum-contents.png);
+  background-repeat: repeat-x, repeat;
+  background-position: center bottom, center top
+}
+#contents .inner {
+  background: url(../img/pattern_b/dum-contents_bottom.png) no-repeat center bottom;
+  padding-top: 40px;
+  padding-bottom: 270px;
+  position: relative
+}
+#contents .snoopy {
+  position: absolute;
+  z-index: 0;
+  left: 810px
+}
+#contents ul {
+  position: relative;
+  z-index: 99999
+}
+#contents li {
+  float: left;
+  margin: 0 20px 20px 0
+}
+#contents li:nth-child(4n) {
+  margin-right: 0
+}
+#contents ul:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  height: 0.1px;
+  font-size: 0.1em;
+  line-height: 0;
+  clear: both
+}
+#footer {
+  background: url(../img/pattern_b/dum-footer.png);
+  height: 130px
+}

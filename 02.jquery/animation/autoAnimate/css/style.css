@@ -1,0 +1,13 @@
+@charset 'utf-8';
+.img_item {
+  position: absolute;
+  right: 0px;
+  opacity: 0;
+  top: 0;
+}
+.img_item2 {
+  position: absolute;
+  right: 0px;
+  opacity: 0;
+  top: 150px;
+}

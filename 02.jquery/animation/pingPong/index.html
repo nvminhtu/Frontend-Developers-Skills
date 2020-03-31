@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Using The jQuery Animate() Step Callback</title>
+  <style type="text/css">
+  
+    html,
+    body {
+      height: 100% ;
+      margin: 0px 0px 0px 0px ;
+      overflow: hidden ;
+      padding: 0px 0px 0px 0px ;
+      width: 100% ;
+      }
+  
+    img {
+      border: 1px solid #000000 ;
+      cursor: pointer ;
+      height: 100px ;
+      overflow: hidden ;
+      position: fixed ;
+      width: 100px ;
+      }
+      
+    img.initial {
+      left: 50% ;
+      margin: -51px 0px 0px -51px ;
+      top: 50% ;
+      }
+  
+  </style>
+  <script type="text/javascript" src="./jquery-1.4.1.js"></script>
+  <script type="text/javascript">
+  
+    // When the DOM is ready, initialize.
+    jQuery(function( $ ){
+      
+      // Get a reference to our test image.
+      var image = $( "img" );
+      
+      // Get the dimensions of the image.
+      var imageWidth = image.outerWidth();
+      var imageHeight = image.outerHeight();
+      
+      // Get the dimentions of the window.
+      var windowWidth = $( window ).width();
+      var windowHeight = $( window ).height();
+      
+      // Get the min and max positions.
+      var minLeft = 0;
+      var maxLeft = (windowWidth - imageWidth);
+      var minTop = 0;
+      var maxTop = (windowHeight - imageHeight);
+      
+      // Let's set some caps on the max speed.
+      var maxSpeed = 5;
+      
+      
+      // Bind the window resize to update the dimensions.
+      $( window ).resize(
+        function(){
+          // Update the window size.
+          windowWidth = $( window ).width();
+          windowHeight = $( window ).height();
+          
+          // Update max positional coordinates.
+          maxLeft = (windowWidth - imageWidth);
+          maxTop = (windowHeight - imageHeight);
+        }
+      );
+      
+      
+      // Define the function for the mouse move. We don't
+      // want to listen to this all the time - only once
+      // the user has clicked on the image.
+      var onMouseMove = function( event ){
+        // Get the mouse offset.
+        var mouseOffset = image.data( "mouseOffset" );
+        
+        // Calculate the position of the image baesd on 
+        // the mouse position and the mouse offset.
+        var position = {
+          left: (event.pageX - mouseOffset.left),
+          top: (event.pageY - mouseOffset.top)
+        };
+        
+        // Check to make sure the image is in bounds
+        // of the top/left screen.
+        position.left = Math.max( position.left, minLeft );
+        position.top = Math.max( position.top, minTop );
+        
+        // Check to make sure the image is in bounds
+        // of the bottom/right screen.
+        position.left = Math.min( position.left, maxLeft );
+        position.top = Math.min( position.top, maxTop );
+        
+        // Update the position of the image.
+        image.css({
+          left: (position.left + "px"),
+          top: (position.top + "px")
+        });
+        
+        // Get the mouse events collection.
+        var mouseEvents = image.data( "mouseEvents" );
+        
+        // Check to see if enough time has passed since
+        // the last mouse event capture. If it has, then
+        // let's store this one.
+        if ((event.timeStamp - mouseEvents[ mouseEvents.length - 1 ].timeStamp ) > 40){
+        
+          // Push the current mouse event.
+          mouseEvents.push( event );
+          
+          // Check the number of mouse events. If there 
+          // are too many, lets remove the oldest one.
+          if (mouseEvents.length > 2){
+            
+            // Remove the oldest event.
+            mouseEvents.shift();
+            
+          }
+          
+        }
+      };
+      
+      
+      // Define the handler for the mouse up since we don't
+      // want to bind this until the image has been clicked.
+      var onMouseUp = function( event ){
+        // Unbind the mouse events.
+        $( document ).unbind( "mousemove mouseup" );
+        
+        // Get the last stored mouse event.
+        var lastEvent = image.data( "mouseEvents" ).shift();
+        
+        // Check to see if we have a mouse move event.
+        // If we don't we can exit out.
+        if (!lastEvent){
+          return;
+        }
+        
+        // Figure out the delta X and Y of the mouse
+        // movement bewteen the release and the last
+        // recorded time.
+        var deltaX = (event.pageX - lastEvent.pageX);
+        var deltaY = (event.pageY - lastEvent.pageY);
+        
+        // Figure out the time over which this change
+        // occurred. We are using MAX to make sure we
+        // don't run into division problems.
+        var deltaMS = Math.max(
+          (event.timeStamp - lastEvent.timeStamp),
+          1
+        );
+        
+        // Calculate the directional speed X using a
+        // simple (distance / time) forumla.
+        var speedX = Math.max(
+          Math.min( (deltaX / deltaMS), maxSpeed ),
+          -maxSpeed
+        );
+        
+        // Calculate the directional speed Y using a
+        // simple (distance / time) forumla.
+        var speedY = Math.max(
+          Math.min( (deltaY / deltaMS), maxSpeed ),
+          -maxSpeed
+        );
+        
+        // Our speed is cacluated in the change in pixels
+        // over a given millisecond. In order to use this,
+        // we will need to capture the number of 
+        // milliseconds between each step of the 
+        // animation. For that, we'll need to stamp each
+        // step with a time.        
+        var lastStepTime = new Date();
+        
+        // Here, we are overriding the meaning of text-
+        // indent. We are going to animate our text-indent
+        // property from 100 to zero so that we can use it
+        // as a psueod-percentage of the completion of the
+        // animation.
+        image.css( "text-indent", 100 );
+        
+        // Animate the image based on the change in 
+        // position in the given change in timeframe. We 
+        // are using the textIndex CSS property to levarage
+        // the Easing of our "speed" calculations.
+        //
+        // NOTE: For the duration, we are picking a fairly
+        // arbitrary value to multiply by. Just something
+        // enough to see the animation in a fun way.
+        image.animate(
+          {
+            textIndent: 0
+          },
+          {
+            duration: (
+              Math.max( 
+                Math.abs( speedX ), 
+                Math.abs( speedY )
+              ) * 3000
+            ),
+            step: function( currentStep ){
+              // Update the speed based on the 
+              // easing. Since we know our step is
+              // going to be between 100 and zero, 
+              // we can use this as an "Eased" per-
+              // centage of our speed.
+              speedX *= (currentStep / 100);
+              speedY *= (currentStep / 100);
+              
+              // Get the current time.
+              var now = new Date();
+              
+              // Get the duration of this step in
+              // milliseconds so that we can apply
+              // our speed updates.
+              var stepDuration = (now.getTime() - lastStepTime.getTime());
+              
+              // Store the last step time.
+              lastStepTime = now;
+              
+              // Get the position of the image.
+              var position = image.position();
+                            
+              // Update the image position left.
+              var newLeft = (position.left + (speedX * stepDuration));
+              
+              // Update the image position top.
+              var newTop = (position.top + (speedY * stepDuration));
+              
+              // Check to see if we have gone out of 
+              // bounds. If the image goes out of 
+              // bounds at any point, we need to 
+              // ajdust the speed to allow the image
+              // to "bounce" off the bounds.
+              
+              // Min left.
+              if (newLeft < minLeft){
+                newLeft = minLeft;
+                speedX *= -1;
+              }
+              
+              // Min top.
+              if (newTop < minTop){
+                newTop = minTop;
+                speedY *= -1;
+              }
+              
+              // Max left.
+              if (newLeft > maxLeft){
+                newLeft = maxLeft;
+                speedX *= -1;
+              }
+              
+              // Max top.
+              if (newTop > maxTop){
+                newTop = maxTop;
+                speedY *= -1;
+              }
+              
+              // Updat the position of the image.
+              image.css({
+                left: (newLeft + "px"),
+                top: (newTop + "px")
+              });
+            }
+          }
+        );
+        
+      };
+      
+      
+      // Bind the mouse down event. 
+      image.mousedown(
+        function( event ){
+          
+          // Prevent the default action.
+          event.preventDefault();
+          
+          // Check to see if the image is still in its
+          // initial state.
+          if (image.is( ".initial" )){
+            
+            // Get the current position.
+            var position = image.position();
+            
+            // Remove the initial class.
+            image.removeClass( "initial" ); 
+            
+            // Set the position (so that the image 
+            // doesn't visibily jump to the top / left
+            // of the screen. NOTE: We are using the 
+            // 51px to make up for visible margin.
+            image.css({
+              left: ((position.left - 51) + "px"),
+              top: ((position.top - 51) + "px")
+            });
+          
+          }
+          
+          // Since we are using the animate() method to
+          // actually move the image, we can use the 
+          // stop() method to hault any animation.
+          image.stop();
+          
+          // Get the current position of the image.
+          var position = image.position();
+          
+          // Get the relative position of the mouse (in 
+          // the context of the image). The extra pixel
+          // is for the image border.
+          var mouseOffset = {
+            left: (event.pageX - position.left + 1),
+            top: (event.pageY - position.top + 1)
+          };
+          
+          // Store the mouse offset with the image so 
+          // that the mouse move event can figure out
+          // how to move the mouse.
+          image.data( "mouseOffset", mouseOffset );
+          
+          // Store the current mouse event so that we
+          // can figure out the change in mouse up event
+          // once the click is released.
+          image.data( "mouseEvents", [ event ] );
+          
+          // Bind the mouse move listener. Make sure to
+          // bind this to the document itself so that 
+          // the image doesn't have to keep up with the
+          // mouse perfectly as it moves.
+          $( document ).mousemove( onMouseMove );
+          
+          // Bind the mouse up listener. Make sure to 
+          // bind this to the document itself so that
+          // the image doesn't have to keep up with the 
+          // mouse perfectly as it moves.
+          $( document ).mouseup( onMouseUp );
+        }
+      );
+      
+    });
+  
+  </script>
+</head>
+<body>
+  <img src="./face.jpg" class="initial" />
+</body>
+</html>

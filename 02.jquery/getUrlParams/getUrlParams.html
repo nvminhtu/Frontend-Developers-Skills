@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer List</title>
+  <link rel="stylesheet" href="css/getUrlParams.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/getUrlParams.js"></script>
+  <script>
+    //add parameter for split name
+     $(function(){
+      var 
+        splitname = 'name',
+        key = $('.key'),
+        value = $('.value');
+      var getValue = $.getUrlVar(splitname);
+      var decodeURL = decodeURIComponent(getValue);
+        key.text(splitname);
+        value.text(decodeURL);
+    });
+    
+  </script>
+</head>
+<body>
+  <p>Get Var of URL: Your_URL/getUrlParams.html?name=Minh Tu&location=Sai Gon<br></p>
+  <p>Key: <span class="key"></span>&nbsp;Value: <span class="value"></span></p>
+</body>
+</html>

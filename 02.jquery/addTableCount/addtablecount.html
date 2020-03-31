@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer List</title>
+  <link rel="stylesheet" href="css/addtablecount.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/addtablecount.js"></script>
+</head>
+
+<body>
+  <table class="information">
+    <tr>
+      <th>Customer</th>
+      <th>Location</th>
+    </tr>
+    <tr>
+      <td>Customer 1</td>
+      <td>Dong Nai</td>
+    </tr>
+    <tr>
+      <td>Customer 2</td>
+      <td>Vung Tau</td>
+    </tr>
+  </table>
+  <script>
+  var options = { 
+    name: "Count", 
+    class: "counter",
+    start: 1
+  };
+  $('.information').tableAddCounter(options);
+</script>
+</body>
+</html>

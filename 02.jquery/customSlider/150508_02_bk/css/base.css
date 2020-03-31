@@ -1,0 +1,71 @@
+/* Copyright (c) 2009, Yahoo! Inc. All rights reserved.
+   Code licensed under the BSD License:
+   http://developer.yahoo.net/yui/license.txt
+   version: 2.7.0
+*/
+
+html { color: #000; background: #fff; }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,table,tr,th,td { margin: 0; padding: 0; }
+table { border-collapse: collapse; border-spacing: 0; border: none; }
+fieldset,img { border: 0; }
+address,caption,cite,code,dfn,em,strong,th,var,optgroup { font-style: normal; font-weight: normal; }
+del,ins { text-decoration: none; }
+li { list-style: none; }
+caption,th { text-align: left; }
+h1,h2,h3,h4,h5,h6 { font-size: 100%; font-weight: normal; line-height: 1.0; }
+q:before,q:after { content: ''; }
+abbr,acronym { border: 0; font-variant: normal; }
+abbr { cursor: help; }
+label { cursor: pointer; }
+sup { vertical-align: baseline; }
+sub { vertical-align: baseline; }
+/*because legend doesn't inherit in IE */
+legend { color: #000; }
+input,button,textarea,select,optgroup,option { font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; }
+/*@purpose To enable resizing for IE */
+/*@branch For IE6-Win, IE7-Win */
+input,button,textarea,select { *font-size: 100%; }
+
+/* Setting
+------------------------------------------------------------------------*/
+
+strong { font-weight: bold; }
+em { font-style: italic; }
+
+th,td {
+	border: 1px solid #999;
+	padding: .5em;
+}
+th {
+	font-weight: bold;
+	text-align: center;
+}
+caption {
+	padding-bottom: .5em;
+	text-align: right;
+}
+
+dfn { font-style: normal; }
+address {
+	font-style: normal;
+	line-height: 1.0;
+}
+
+.clear { clear: both; }
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	font-size:0;
+}
+.clearfix { display: inline-block; }
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
+
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }

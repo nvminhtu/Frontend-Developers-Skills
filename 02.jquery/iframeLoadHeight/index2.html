@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>contents demo</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<p>Hello <a href="http://ejohn.org/">John</a>, how are you doing?</p>
+ 
+<script>
+$( "p" )
+  .contents()
+  .filter(function(){
+    return this.nodeType !== 1;
+  })
+  .wrap( "<b></b>" );
+</script>
+ 
+</body>
+</html>

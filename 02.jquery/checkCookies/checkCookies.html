@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer List</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+</head>
+<script>
+;(function($) {
+  
+  "use strict";
+  $(function(){
+    
+    // $.cookie('visits',null); //delete cookies
+    // $.cookie('visits','10'); //set cookies
+    var check_cookie = $.cookie('isMember');
+    //run
+    if(!check_cookie) {
+      $('p.welcome').html('First Visit');
+      $.cookie('isMember',{"expires": 1, "path" : "/" })
+    }
+  })
+  
+})(jQuery);
+</script>
+<body>
+  <p class="welcome">Already Visited</p>
+</body>
+</html>
