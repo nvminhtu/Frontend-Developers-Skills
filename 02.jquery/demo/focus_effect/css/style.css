@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+/* reset */
+html, body, div, img, ul, li, table, tr, td, th, small, hr,
+address, p, span, a, h1, h2, h3, h4, h5, h6, dd, dt, dl, form {margin: 0;padding: 0;}
+table {	border: 0;	border-spacing: 0;}
+th {font-weight: normal;}
+ul, ol {list-style: none;}
+a {outline : none;}
+img{border: none;}
+input {	outline : none;}
+/*input ,select{	vertical-align:middle;}*/
+address {font-style: normal;}
+canvas {}
+
+
+/* commcon */
+body
+{
+	font-size: 100%;
+	/*font-family:"Radley", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro","HGS明朝E", "ＭＳ Ｐ明朝", serif;*/
+	font-family:"Radley", "ＭＳ Ｐ明朝", serif;
+}
+
+
+p
+{
+	line-height:1.8em;
+	font-size:90%;
+	letter-spacing:0.03em;
+}
+
+
+
+.no-webft {font-family:"ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", serif;}
+
+a {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+.cf:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0px;
+	visibility: hidden;
+}
+
+
+
+

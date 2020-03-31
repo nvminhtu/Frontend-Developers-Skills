@@ -1,0 +1,30 @@
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 5000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.popupWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10000;
+  margin-left: -480px;
+  background: #fff;
+  display: none;
+}
+.popupWrapper .closePopup {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.popupWrapper .popup_inner {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  width: 900px;
+}

@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+html{overflow-y:scroll;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;}table{border-collapse:collapse;border-spacing:0;}caption,th{text-align:left;}q:before,q:after{content:'';}object,embed{vertical-align:top;}hr,legend{display:none;}h1,h2,h3,h4,h5,h6{font-size:100%;}img,abbr,acronym,fieldset{border:0;}ul li{list-style-type:none;}a,label{cursor:pointer;}img{vertical-align:bottom;margin:0;padding:0;}
+
+/*  layout
+----------------------------------------*/
+body {
+  background: url(../img/main-bg.jpg) repeat 0 0;
+}
+.container {
+  margin: 72px auto;
+}
+.inner {
+  width: 1000px;
+  margin: 0 auto;
+}
+.heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.wrap_slider {
+  overflow: hidden;
+  position: relative;
+  height: 242px;
+  background: url(../img/bg-slider.png) top center no-repeat;
+  padding-top: 18px;
+}
+.simple_slider {
+  width: 730px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.main_slider {
+  width: 9999em;
+  overflow: hidden;
+  height: 200px;
+}
+.main_slider li {
+  float: left;
+  width: 730px;
+}
+/*  Demo
+----------------------------------------*/
+.demo_list ul li a {
+  color: #000;
+}
+.demo_list ul li a,
+.demo_list ul li a:visited {
+  color: #000;
+}
+.demo_list ul li a:hover {
+  color: #707028;
+}
+/*  Prev and Next Button
+----------------------------------------*/
+.controller a {
+  display: block;
+  text-indent: -9999em;
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+}
+.controller .btn_prev {
+  left: 84px;
+  background: url(../img/img-arrow_left.png) 0 0 no-repeat;
+}
+.controller .btn_next {
+  right: 84px;
+  background: url(../img/img-arrow_right.png) 0 0 no-repeat;
+}
+/*  Pagination
+----------------------------------------*/
+.pagination {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: block;
+  text-align: center;
+  height: 11px;
+  line-height: 11px;
+}
+.pagination li {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+.pagination li a {
+  display: block;
+  background: url(../img/img-pager_off.png) 0 0 no-repeat;
+  width: 15px;
+  height: 11px;
+  margin: 0 6px;
+  text-indent: -9999em;
+}
+.pagination li.active a {
+  background: url(../img/img-pager_on.png) 0 0 no-repeat;
+}

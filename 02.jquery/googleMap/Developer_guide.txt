@@ -1,0 +1,4 @@
+> Read json data 
+> $get.JSON 
+> clone to another array
+> Load multi google maps by read data from array.

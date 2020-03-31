@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer List</title>
+  <style type="text/css">
+    .highlight {
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="super">
+    <input type="text" value="search" name="keyword">
+    <p>Lorem ipsum dolor sit āmet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, nò sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing </p>
+  <!-- /.super --></div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/highlight.js"></script>
+    <script type="text/javascript">
+    $(function() {
+      var mark = function() {
+        $(".super *").removeHighlight();
+        var keyword = $("input[name='keyword']").val(); 
+        $(".super *").highlight(keyword, "highlight");
+      }
+      
+      $("input[name='keyword']").on("keyup", mark);
+    });
+
+  </script>
+</body>
+</html>

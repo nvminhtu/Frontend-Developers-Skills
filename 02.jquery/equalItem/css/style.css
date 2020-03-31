@@ -1,0 +1,33 @@
+body {
+  margin: 50px;
+  text-align: center;
+}
+body form {
+  margin: 0px auto 0;
+  width: 200px;
+}
+
+.gallery {
+  overflow: hidden;
+  clear: both;
+  width: 420px;
+}
+.product,
+.clothes {
+  width: 200px;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.product {
+  margin-right: 20px;
+}
+.clothes li,
+.product li {
+  list-style: none;
+  width: 200px;
+  margin: 5px 0 0 0px;
+  background: #dddddd;
+  float: left;
+  clear: both;
+}

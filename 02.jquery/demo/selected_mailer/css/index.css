@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/*----------------------------------------
+    大見出し
+----------------------------------------*/
+
+/*  小見出し
+----------------------------------------*/
+
+#ebook {
+  width: 310px;
+  margin: 0 auto;
+  text-align: center;
+}
+.show_ebook {
+  width: 150px;
+  margin: 0 auto;
+  position: relative;
+}
+.show_ebook span {
+  position: absolute;
+  bottom: 8px;
+  left: 0px;
+  color: #113CBB;
+  padding: 7px 0;
+  width: 150px;
+  font-weight: bold;
+}
+.boxshow {
+  width: 150px;
+  height: 190px;
+  position: relative;
+}
+.boxshow ul {
+  position: relative;
+}
+.boxshow ul li {
+  width: 150px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

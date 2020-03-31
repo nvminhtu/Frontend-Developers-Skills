@@ -1,0 +1,17 @@
+.container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+.content {
+  float: left;
+  width: 600px;
+}
+.aside {
+  float: right;
+  width: 300px;
+}
+.footer {
+  float: left;
+  width: 100%;
+}
