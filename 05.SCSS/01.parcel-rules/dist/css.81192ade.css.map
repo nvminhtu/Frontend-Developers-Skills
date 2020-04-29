@@ -1,0 +1,1 @@
+{"version":3,"sources":["css\\index.scss"],"names":[],"mappings":"AAGA;EACE,OAJI;;;AAON;EACE,OAPa","file":"css.81192ade.css","sourceRoot":"..","sourcesContent":["$red: #e74c3c;\r\n$light-yellow: #ffee44;\r\n\r\nh1 {\r\n  color: $red;\r\n}\r\n\r\nh2 {\r\n  color: $light-yellow;\r\n}\r\n\r\n"]}
