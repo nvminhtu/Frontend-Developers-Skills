@@ -1,7 +1,24 @@
 # FRONTEND DEVELOPERS
 
-## 01.SASS - RULES
+## >>>>>>>>>>>>>>>>>>>> LIST FOR PRACTICES <<<<<<<<<<<<<<<<<<<<<
+### 01. HTML
+### 02. CSS
+### 03. JQUERY
+### 04. BOOTSTRAP
+### 05. SCSS
+### 06. REACTJS
+### 07. VUEJS
+### 08. ANGULARJS
+### 09. AJAX
+### 10. PROJECTS
+### 11. REST API
+### 12. BUILD TOOLS
+### 13. TEST
+### 14. JAVASCRIPT & ES6
 
+## >>>>>>>>>>>>>>>>>>>>>> DETAILTS <<<<<<<<<<<<<<<<<<<<<<<
+
+### 05. SCSS
 * Preprocessing
 * Variable
 * Mixins
@@ -11,8 +28,9 @@
 * Extend/Inheritance
 * Operators
 
-## 02.WEBPACK 4
+### 12.BUILD TOOLS
 
+#### WEBPACK 4
 * Issue 01 - Configure WEBPACK 4 - [Beginner Webpack 4 Guide](https://hackernoon.com/lets-start-with-webpack-4-91a0f1dba02e)
 * [SOURCE] packages includes:
 * Live Server: webpack-dev-server
@@ -25,32 +43,7 @@
 * copy-webpack-plugin
 * Different environments: webpack-merge, clean-webpack-plugin
 
-## 03.Usuage of MARKDOWN  GUIDE
+#### MARKDOWN  GUIDE
 
 * Press Ctrl+Shift+V on Visual Studio Code to preview Markdown
 * Markdown Format - following by [Markdown Guide](https://www.markdownguide.org/basic-syntax/#links)
-
-## 04. JQUERY
-
-* JQUERY DOM
-* JQUERY Accordion
-* JQUERY ScrollTo
-
-## 05. CSS3
-
-## 06. JAVASCRIPT (ES5,ES6)
-
-* Scope/Hoisting
-
-## UI Layout
-
-* BULMA
-* MATERIAL DESIGN
-* SEMANTIC
-* BOOTSTRAP
-
-## PROJECTS
-
-
-### PROJECT01: Generate Hashtag
-
