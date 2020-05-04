@@ -1,0 +1,19 @@
+{
+  "name": "06.es6",
+  "version": "1.0.0",
+  "description": "ES6 Demo & Learn",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist"
+  },
+  "keywords": [
+    "es6"
+  ],
+  "author": "jstut",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1"
+  }
+}
