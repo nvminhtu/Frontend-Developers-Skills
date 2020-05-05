@@ -1,50 +1,46 @@
 <html>
     <head>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        
     </head>
     <body>
-        
+
         <div id="app-1">
             <span v-if="seen">Now you see me</span>
         </div>
-            
-       
+
         <ul id="app-2">
             <li v-for="(item,index) in items">
-                {{ parentMessage }} - {{ index }} - {{ item.message }}
+                {{ brand }} - {{ index }} - {{ item.model }}
             </li>
         </ul>
-        
+
         <div id="app-4">
-                <!-- <ol>
-                    <li>Singapore</li>
-                    <li>Malaysia</li>
-                    <li>Thailand</li>
-                    <li>Vietnam</li>
-                    <li>Philippin</li>
-                </ol> -->
-                <ol>
-                    <li v-for="todo in todos">
-                        {{todo.text}}
-                    </li>
-                </ol>
-            </div>
-        
+            <ol>
+                <li v-for="item in countries">
+                    {{ item.name }}
+                </li>
+            </ol>
+        </div>
+   
         <div id="app-5">
+            <p>{{ message }}</p>
+            <button v-on:click="daoMessage">Reverse message</button>
+        </div>
+       
+        <div id="app-6">
+            <p>{{ message }}</p>
+            <input v-model="message">
+        </div>
+
+        <div id="app-7">
+            <p>Write your own Component</p>
+            <todo-item></todo-item>
+        </div>
+         <!-- <div id="app-5">
             <p>using Mustacles: {{ rawHtml }}</p>
             <p>Using v-html directive: <span v-html="rawHtml"></span></p>
-        </div>
-        
-        <div id="app-6"> 
-            <p>Using v-bind</p>
-            <div class="data-student">
-                <p v-bind:id="name">{{ name }}</p>
-                <p v-bind:id="age"></p>
-                <p v-bind:id="from"></p>
-            </div>
-            
-        </div>
+        </div> -->
+       
     </body>
     <script src="index.js"></script>
 </html>
