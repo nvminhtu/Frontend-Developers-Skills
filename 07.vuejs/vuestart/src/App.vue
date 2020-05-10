@@ -26,26 +26,28 @@
       </div>
 
       <v-spacer></v-spacer>
+      <v-btn class="mr-4" color="yellow"><router-link :to="{ name: 'Homepage'}">Homepage</router-link></v-btn>
+      <v-btn class="mr-4" color="yellow"><router-link to="/quizzes">Quizzes</router-link></v-btn>
+      <v-btn class="mr-4" color="yellow"><router-link to="/users">Users</router-link></v-btn>
     </v-app-bar>
 
     <v-content>
-      <Users />
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import Users from './components/Users';
-
 export default {
   name: 'App',
-
   components: {
-    Users
+    // not calling components
   },
-
   data: () => ({
     //
   }),
 };
 </script>
+
+<style>
+</style>
