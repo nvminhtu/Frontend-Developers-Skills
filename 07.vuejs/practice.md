@@ -18,7 +18,7 @@
 * CSS: Flex, Grid,....
 
 ### Projects:
-* 1 - Blog VueJS ( Use Axios fetch Data from API)
+* [1 - Blog VueJS ( Use Axios fetch Data from API) + Vuetify](https://nvminhtu.github.io/projects/vuejs/01-basic-vue-api/)
 * 2 - Blog VueJS  read Data from Markdown files
 * 3 - Blog with Quiz (Basic Structure of Component VueJS )
 * 4 - Weather App ( Read data from API, xài Bootstrap Vue)
@@ -38,5 +38,6 @@
 * English Quotes (đọc dữ liệu từ data) - Bonus thêm tự tạo hình từ nguồn free image và overlay text quotes lên) + Đọc text từ json/csv/...?
 
 
-
+### Đã học:
+* Biết config dist cho vue project ( setup vue.config.js)
 
